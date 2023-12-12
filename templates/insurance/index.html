@@ -2,51 +2,78 @@
 {% load static %}
 <html lang="en" dir="ltr">
 
-<style>
-        .xyz{
-          margin-bottom: 0px;
-          background-image: url('{% static "profile_pic/Customer/phy2.jpeg" %}');
-          background-size: cover;
-          background-repeat: no-repeat;
+<head>
+    <title>Nakili</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
         }
-</style>
-<body style="background-color: cadetblue">
-  {% include "insurance/navbar.html" %}
-<br>
 
-  </div>
-<section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center " style="background-color: cadetblue">
-  <div class="container text-center">
-    <h2 class="display-3" style="color: whitesmoke">Nakili Insurance Firm</h2>
+        body {
+            display: flex;
+        }
 
-    <p class="display-4 d-none d-sm-block">A Healthy Community!</p>
-    
-    <p class="lead">Sign Up now to start applying for your first policy</p>
+        .left-section {
+            flex: 1;
+            background-image: url('{% static "profile_pic/Customer/phy2.jpeg" %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
-  
-    
-    <a href="/customer/customersignup" class="btn btn-lg btn-success" style="border-radius: 0%;"><i class="fa fa-user" aria-hidden="true"></i> Sign Up as Customer</a>
-    
-    <br>
-    
-    <br><br>
+        .right-section {
+            flex: 1;
+            background-color: darkcyan;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: whitesmoke;
+        }
 
-    <p class="lead text-center" style="color: whitesmoke"> “Getting insurance is YOUR responsibility to your FAMILY and LOVED ONES. You may hate it, BUT it is your responsibility.”
-    </p>
-  
-  <p class="text-center">- Jeremian Say</p>
-  </div>  
-</section>
+        .right-section-content {
+            text-align: center;
+            max-width: 80%;
+            margin-bottom: 40px;
+        }
 
-<!-- 
-<div class="jumbotron" style="margin-top: 0px;margin-bottom: 0px;">
+        .quote {
+            font-style: italic;
+            margin-top: 20px;
+        }
 
- 
-  
-</div> -->
-  {% include "insurance/footer.html" %}
+        .signup-btn {
+            border-radius: 0%;
+            margin-top: 20px;
+            font-size: 1.2em;
+            padding: 12px 24px;
+        }
 
+        /* Add other necessary styles */
+    </style>
+</head>
 
+<body>
+<div class="left-section"></div>
+<div class="right-section">
+    {% include "insurance/navbar.html" %}
+    <div class="right-section-content">
+        <h2>Nakili Insurance Firm</h2>
+        <p>A Healthy Community!</p>
+        <p class="lead">Sign Up now to start applying for your first policy</p>
+        <p class="quote">“Getting insurance is YOUR responsibility to your FAMILY and LOVED ONES. You may hate it, BUT
+            it is your responsibility.”</p>
+        <p>- Jeremian Say</p>
+        <a href="/customer/customersignup" class="btn btn-lg btn-success signup-btn"><i class="fa fa-user"
+                                                                                        aria-hidden="true"></i> Sign Up
+            as Customer</a>
+    </div>
+    {% include "insurance/footer.html" %}
+</div>
 </body>
 
 </html>

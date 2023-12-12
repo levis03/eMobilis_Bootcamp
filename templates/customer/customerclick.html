@@ -3,40 +3,112 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-  <style media="screen">
-    .jumbotron {
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
+    <style media="screen">
+        body {
+            font-family: Arial, sans-serif;
+            {#background-color: #f8f9fa;#}
+            background-image: url("static/profile_pic/Customer/phy2.jpeg");
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
 
-    .jumbotron h1 {
-      text-align: center;
-    }
+        .content {
+            flex: 1;
+        }
 
-  </style>
+        .jumbotron {
+            margin-bottom: 0;
+            background-color: #fff;
+            border-radius: 0;
+            padding: 80px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .jumbotron h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .lead {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            font-size: 1.2rem;
+            border-radius: 25px;
+            padding: 12px 30px;
+            margin: 0 10px;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+        .footer {
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+    <title>Customer</title>
 </head>
 
 <body>
 
-  {% include "insurance/navbar.html" %}
-  <br><br>
-  <div class="jumbotron text-center" style="margin-bottom:0px;">
-    <h1 class="display-4">Hello, Customer</h1>
-    <p class="lead">Welcome to Insurance Management System</p>
-    <hr class="my-4">
-    <p></p>
-    <p class="lead">
-      <a class="btn btn-danger btn-lg" href="customersignup" role="button">Create Your Account</a>
-      <a class="btn btn-success btn-lg" href="customerlogin" role="button">Login</a>
-    </p>
-    <br><br><br>
-  </div>
- 
-  {% include "insurance/footer.html" %}
+{% include "insurance/navbar.html" %}
+
+<div class="content">
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, Customer</h1>
+        <p class="lead">Welcome to the Nakili Insurance Firm</p>
+        <hr class="my-4">
+        <div class="btn-container">
+            <a class="btn btn-danger btn-lg" href="customersignup" role="button">Create Your Account</a>
+            <a class="btn btn-success btn-lg" href="customerlogin" role="button">Login</a>
+        </div>
+    </div>
+</div>
+
+{% include "insurance/footer.html" %}
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
