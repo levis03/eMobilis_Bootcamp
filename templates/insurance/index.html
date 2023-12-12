@@ -5,32 +5,33 @@
 <style>
         .xyz{
           margin-bottom: 0px;
-          background-image: url('{% static "image/homepage.jpg" %}');
+          background-image: url('{% static "profile_pic/Customer/phy2.jpeg" %}');
           background-size: cover;
           background-repeat: no-repeat;
         }
 </style>
-<body>
+<body style="background-color: cadetblue">
   {% include "insurance/navbar.html" %}
 <br>
 
-<section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center ">
+  </div>
+<section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center " style="background-color: cadetblue">
   <div class="container text-center">
-    <h2 class="display-3 text-danger">Insurance Management System</h2>
+    <h2 class="display-3" style="color: whitesmoke">Nakili Insurance Firm</h2>
 
-    <p class="display-4 d-none d-sm-block">Using Python Django</p>
+    <p class="display-4 d-none d-sm-block">A Healthy Community!</p>
     
     <p class="lead">Sign Up now to start applying for your first policy</p>
 
   
     
-    <a href="/customer/customersignup" class="btn btn-lg btn-danger" style="border-radius: 0%;"><i class="fa fa-user" aria-hidden="true"></i> Sign Up as Customer</a>
+    <a href="/customer/customersignup" class="btn btn-lg btn-success" style="border-radius: 0%;"><i class="fa fa-user" aria-hidden="true"></i> Sign Up as Customer</a>
     
     <br>
     
     <br><br>
 
-    <p class="lead text-center"> “Getting insurance is YOUR responsibility to your FAMILY and LOVED ONES. You may hate it, BUT it is your responsibility.”
+    <p class="lead text-center" style="color: whitesmoke"> “Getting insurance is YOUR responsibility to your FAMILY and LOVED ONES. You may hate it, BUT it is your responsibility.”
     </p>
   
   <p class="text-center">- Jeremian Say</p>

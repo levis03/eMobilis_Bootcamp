@@ -3,35 +3,43 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Add Bootstrap CSS or link to your preferred CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-
-
-
+    <title> Contact Us</title>
 </head>
 
-<body>
+<body style="background-color: whitesmoke">
 
-  {% include "insurance/navbar.html" %}
-  <br><br>
+{% include "insurance/navbar.html" %}
+<div class="container mt-1" style="background-color: cadetblue">
+    <div class="row justify-content-center">
+        <div class="col-md-6" style="margin-top: 40px">
 
-  <center>
-    <h3 class='alert alert-success'>Send Us Your Valuable Feedback !</h3>
+            <h2 class="alert feedback.title text-center" style="color: whitesmoke"> Send Us Your Valuable Feedback!</h2>
 
-    <form method="POST" autocomplete="off">
-      <!-- Very Important csrf Token -->
-      {% csrf_token %}
-      <div class="form-group">
-        <p>
-        <h3>{{ form.as_p }}</h3>
-        </p>
-        <br>
-        <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
-      </div>
-    </form>
-  </center>
+            <form method="POST" autocomplete="off">
+                <!-- Very Important csrf Token -->
+                {% csrf_token %}
+                <fieldset>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="lname"><br><br>
+                    <label for="message">Message:</label><br>
+                    <input type="text" id="message" name="message"><br><br>
+                    <input type="submit" value="Send Message" class='btn btn-primary btn-lg d-block mx-auto'>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+            {% include "insurance/footer.html" %}
 
-  {% include "insurance/footer.html" %}
+            <!-- Bootstrap JS or any other JS scripts if needed -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
-
 </html>
+
